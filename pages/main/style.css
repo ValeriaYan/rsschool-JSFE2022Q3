@@ -6,6 +6,7 @@
     --font-size-subtitle: 24px;
     --font-size-body: 16px;
     --font-size-small: 15px;
+    --font-size-logo: 19px;
 
     --line-height-h1: 75%;
     --line-height-h2: 120%;
@@ -20,6 +21,7 @@
     --color-yellow: #FFEE2E;
     --color-red: #D31414;
     --color-black-blue: #333B41;
+    --color-black: #000000;
     --color-gray: #333B41;
     --color-gray-smoky: #ABABAB;
     --color-light-gray: #F1F3F2;
@@ -42,5 +44,126 @@
         --font-size-h1: calc((100vw - 320px)/(640 - 320) * (54 - 28) + 28px);
         --font-size-h2: calc((100vw - 320px)/(640 - 320) * (48 - 24) + 24px);
         --font-size-h3: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
+        --font-size-logo: 12px;
     }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-size-body);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    position: relative;
+
+    max-width: 82px;
+    max-height: 52px;
+    padding: 3px;
+    
+    text-align: center;
+    border: solid 1px var(--color-white);
+    
+    font-size: var(--font-size-logo);
+    font-weight: 400;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 9px;
+    width: 13px;
+    height: 21px;
+    background-image: url(../../assets/icons/bamboo-logo.svg);
+}
+
+.logo__link {
+    color: var(--color-white);
+}
+
+/* _______________________________________________________________HEADER____________________________________________________________________ */
+
+.header {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 14px 0;
+}
+
+.header__container {
+
+}
+.container {
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__main {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 63px;
+}
+
+.header__nav {
+}
+
+.nav {
+    
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 58px;
+
+}
+
+.nav__link {
+    color: var(--color-white);
+}
+
+.nav__default,
+.nav__link:hover,
+.header__copy a:hover {
+    color: var(--color-orange)
+}
+
+.nav__default {
+    cursor:default;
+}
+
+.nav__item:last-child{
+    margin-right: none;
+}
+
+.header__copy {
+    display: flex;
+    align-items: center;
+}
+
+.header__copy a{
+    color: var(--color-white)
 }
