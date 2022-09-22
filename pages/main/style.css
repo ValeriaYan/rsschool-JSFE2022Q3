@@ -61,6 +61,7 @@ body {
     font-size: var(--font-size-body);
     font-weight: 400;
     line-height: var(--line-height-body);
+    color: var(--color-black-blue)
 }
 
 .container {
@@ -271,4 +272,58 @@ a {
         width: 36vw;
         height: 36vw;
     }
+}
+
+/* ____________________________________________________________BACKSTAGE_________________________________________________ */
+
+.backstage {
+    position: relative;
+    padding: 140px 0 var(--section-padding-bottom) 0;
+}
+
+.backstage::before {
+    content: url(../../assets/images/flower.png);
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.backstage__body {
+    position: relative;
+    display: flex;
+}
+
+.backstage__img {
+    flex: 1 1 56.5%;
+}
+
+.backstage__img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.backstage__info {
+    flex: 1 1 43.5%;
+    margin-left: 7.5%;
+}
+
+.backstage__title {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+}
+
+.backstage__text {
+}
+
+.backstage__subtitle {
+    margin: 54px 0 34px 0;
+}
+
+.subtitle {
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-subtitle);
 }
