@@ -120,7 +120,7 @@ a {
     cursor: pointer;
 }
 
-.btn_flat {
+.btn.btn_flat {
     border-radius: 5px;
 }
 
@@ -691,3 +691,149 @@ a {
     margin: 0 auto;
 }
 
+/* ______________________________________________TESTIMONIALS___________________________________________________ */
+
+.testimonials {
+    padding: 140px 0 180px 0;
+    position: relative;
+}
+
+.testimonials::before {
+    content: url(../../assets/images/leav.png);
+    position: absolute;
+    bottom: -145px;
+    right: 0;
+    
+}
+
+.testimonials__container {
+}
+
+.container {
+}
+
+.testimonials__h3 {
+    margin-bottom: 47px;
+    text-align: center;
+}
+
+.testimonials__reviews {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+
+    margin-bottom: 21px;
+}
+
+.testimonials__review {
+    margin-right: 30px;
+}
+
+.testimonials__review:last-child {
+    margin-right: 0;
+}
+
+.review {
+    flex: 0 0 23%;
+    height: 391px;
+
+    padding: 15px 14px 19px 16px;
+
+    border-radius: 20px;
+
+    border: 2px solid transparent;
+    background: var(--color-pink-grad);
+    box-shadow: inset 0px 0px 0px 100vw var(--color-light-gray) ;
+}
+
+.review__top {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.review__avatar {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-image: url(../../assets/icons/user_icon.svg);
+    margin-right: 10px;
+}
+
+
+.review__info {
+
+}
+
+.review__name {
+    color: var(--color-black);
+}
+
+.review__local {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    font-weight: 300;
+    color: #BDBDBD;
+}
+
+
+.review__text {
+    overflow: hidden;
+    height: 86%;
+}
+
+.review__text p{
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    font-weight: 300;
+    color: var(--color-gray)
+}
+
+.testimonials__range {
+    appearance: none; 
+    -moz-appearance: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 31px;
+
+    width: 600px;
+}
+
+.testimonials__range::-webkit-slider-runnable-track {
+    background-color: #F5F7F6;
+    border-radius: 5px;
+    
+    border: 1px solid transparent;
+    background: var(--color-pink-grad);
+    box-shadow: inset 0px 0px 0px 100vw var(--color-light-gray);
+    height: 7px;
+}
+
+.testimonials__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 116px;
+    height: 6px;
+    background: var(--color-orange);
+    border-radius: 5px;
+}
+
+.testimonials__btn {
+    display: inline-block;
+    padding-left: 83px;
+    padding-right: 83px;
+}
+
+.testimonials__reviews::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.testimonials__reviews::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+
+/* scroll for firefox */
+html, body {
+    scrollbar-width: none;
+}
