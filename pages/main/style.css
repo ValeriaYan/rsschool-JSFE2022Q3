@@ -322,6 +322,7 @@ a {
 .title {
     font-size: var(--font-size-h2);
     line-height: var(--line-height-h2);
+    font-weight: 400;
 }
 
 .backstage__text {
@@ -346,7 +347,7 @@ a {
 .pets::before,
 .pets::after {
     position: absolute;
-    bottom: -10px;
+    bottom: -6px;
 }
 
 .pets::before {
@@ -412,7 +413,7 @@ a {
     
     width: 16px;
     height: 8px;
-    
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -503,7 +504,7 @@ a {
 .card__info {
     position: relative;
     bottom: 0;
-    padding: 1px 16px 10px 16px;
+    padding: 8px 16px 10px 16px;
     transition: all 0.3s ease;
 }
 
@@ -528,7 +529,7 @@ a {
 .card__bottom_meat::before {
     content: "";
     position: absolute;
-    top: 0px;
+    top: 8px;
     right: 10px;
     width: 40px;
     height: 40px;
@@ -553,5 +554,140 @@ a {
     font-size: 15px;
 
     background: var(--color-orange);
+}
+
+
+/*__________________________________________________FRIEND__________________________________________________  */
+
+.friend {
+    padding: 69px 0 var(--section-padding-bottom) 0;
+    background: var(--color-orange-light-grad);
+}
+
+.friend__body {
+    padding: 41px 59px 59px 59px;
+    background-color: rgba(253, 253, 255, 0.52);
+    border-radius: 20px;
+}
+
+.friend__title {
+    margin-bottom: 30px;
+    color: var(--color-orange);
+    text-align: center;
+}
+
+
+.friend__subtitle {
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+
+.friend__info{
+    margin-bottom: 60px;
+    margin-left: 40px;
+}
+
+.friend__text {
+    margin-bottom: 10px;
+}
+
+.friend__text:last-child{
+    margin-bottom: 0px;
+}
+
+.friend__text_bold {
+    font-weight: 500;
+}
+
+.friend__link {
+    position: relative;
+    color: var(--color-black-blue);
+    border-bottom: 1px solid var(--color-orange);
+}
+
+.friend__link:hover {
+    color: var(--color-green);
+    border-bottom: 1px solid var(--color-green);
+}
+
+
+.friend__h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    font-weight: 400;
+}
+
+.friend__steps {
+    max-width: 764px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.friend__step {
+    position: relative;
+}
+
+.friend__step::before {
+    content: url(../../assets/icons/arrow.svg);
+    position: absolute;
+    top: 60px;
+    right: -100px;
+}
+
+.friend__step:last-child::before {
+    display: none;
+}
+
+.step {
+    width: 168px;
+}
+
+.step__icon {
+    position: relative;
+
+    width: 168px;
+    height: 168px;
+
+    margin-bottom: 30px;
+
+    background-color: var(--color-white);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: var(--color-orange);
+    box-shadow: inset 0px 0px 0px 500px #fff;
+}
+
+.step__icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step__icon_pay::before{
+    content: url(../../assets/icons/pay.svg);
+}
+
+.step__icon_zoo::before{
+    content: url(../../assets/icons/zoo.svg);
+}
+
+.step__icon_monkey::before{
+    content: url(../../assets/icons/monkey.svg);
+}
+
+.friend__btn {
+    padding-left:70px;
+    padding-right:70px;
+    margin: 0 auto;
 }
 
