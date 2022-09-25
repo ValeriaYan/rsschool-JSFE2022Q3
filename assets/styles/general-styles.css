@@ -1,0 +1,190 @@
+:root {
+    --font-size-h1: 107px;
+    --font-size-h2: 48px;
+    --font-size-h3: 36px;
+    --font-size-btn: 16px;
+    --font-size-subtitle: 24px;
+    --font-size-body: 16px;
+    --font-size-small: 15px;
+    --font-size-logo: 19px;
+
+    --line-height-h1: 75%;
+    --line-height-h2: 120%;
+    --line-height-h3: 130%;
+    --line-height-subtitle: 120%;
+    --line-height-body: 140%;
+    --line-height-btn: 140%;
+    --line-height-small: 120%;
+
+    --color-green: #4B9200;
+    --color-orange-grad: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    --color-orange: #FE9013;
+    --color-yellow: #FFEE2E;
+    --color-red: #D31414;
+    --color-black-blue: #333B41;
+    --color-black: #000000;
+    --color-gray: #767474;
+    --color-gray-smoky: #ABABAB;
+    --color-light-gray: #F1F3F2;
+    --color-glass-white: #FDFDFF;
+    --color-white: #FFFFFF;
+    --color-orange-light-grad: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
+    --color-pink-grad: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
+    --section-padding-bottom: 100px;
+}
+
+@media(max-width: 1600px) {
+    :root {
+        --font-size-h1: calc((100vw - 1000px)/(1600 - 1000) * (107 - 85) + 85px);
+    }
+}
+
+@media(max-width: 1000px){
+    :root {
+        --font-size-h1: calc((100vw - 640px)/(1000 - 640) * (85 - 54) + 54px);
+    }
+}
+
+@media(max-width: 640px){
+    :root {
+        --font-size-h1: calc((100vw - 320px)/(640 - 320) * (54 - 28) + 28px);
+        --font-size-h2: calc((100vw - 320px)/(640 - 320) * (48 - 24) + 24px);
+        --font-size-h3: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
+        --font-size-logo: 12px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    line-height: var(--line-height-body);
+    color: var(--color-black-blue)
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    position: relative;
+
+    max-width: 82px;
+    max-height: 52px;
+    padding: 3px;
+    
+    text-align: center;
+    border: solid 1px var(--color-white);
+    border-radius: 2px;
+    
+    font-size: var(--font-size-logo);
+    font-weight: 400;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 9px;
+    width: 13px;
+    height: 21px;
+    background-image: url(../../assets/icons/bamboo-logo.svg);
+}
+
+.logo__link {
+    color: var(--color-white);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-size-btn);
+    line-height: var(--line-height-btn);
+    
+    color: var(--color-white);
+    text-transform: uppercase;
+    
+    background: var(--color-orange-grad);
+    cursor: pointer;
+}
+
+.btn.btn_flat {
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #E47209;
+}
+
+.btn:active {
+    background: var(--color-green);
+}
+
+.btn:disabled{
+    background: var(--color-gray);
+}
+
+.nav {
+    
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 58px;
+    list-style-type: none;
+}
+
+.nav__item:last-child{
+    margin-right: 0;
+}
+
+.nav__link {
+    color: var(--color-white);
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.nav__default,
+.nav__link:hover,
+.header__copy a:hover {
+    color: var(--color-orange)
+}
+
+.nav__default {
+    cursor:default;
+}
+
+.nav__item:last-child{
+    margin-right: none;
+}

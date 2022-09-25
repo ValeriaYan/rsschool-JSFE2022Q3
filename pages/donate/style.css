@@ -1,0 +1,359 @@
+﻿.picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture {
+    max-height: 387px;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding-top: 40px;
+    padding-bottom: 180px;
+    background: var(--color-orange-light-grad);
+}
+
+.main__container {
+}
+
+.container {
+}
+
+.main__title {
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.main__text {
+    color: var(--color-white);
+    margin-bottom: 43px;
+}
+
+.main__subtitle {
+    color: var(--color-orange);
+    margin-bottom: 60px;
+}
+
+.friend {
+    padding: 40px 92px 62px;
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.friend__title {
+    text-align: center;
+    color: var(--color-orange);
+    margin-bottom: 20px;
+}
+
+.title {
+}
+
+.friend__subtitle {
+    margin-bottom: 60px;
+}
+
+.subtitle {
+}
+
+.friend__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 44px;
+}
+
+.friend__quantity-num{
+    font-size: 72px;
+    line-height: 80%;
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.friend__quantity-diet {
+    position: relative;
+    text-align: center;
+    margin-right: 80px;
+}
+
+.friend__quantity-diet::before {
+    content: url(../../assets/icons/x_icon.svg);
+    position: absolute;
+    top: 50%;
+    right: -25px;
+
+    transform: translate(0, -50%);
+}
+
+.amount {
+    margin-bottom: 30px;
+}
+
+.amount__text {
+    color: var(--color-black);
+    padding-left: 4px;
+    margin-bottom: 4px;
+}
+
+.amount__donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amount__scale {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 10px;
+
+    margin-bottom: 87px;
+}
+
+.amount__scale::before,
+.amount__scale::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 27px;
+
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    background-color: #404950;
+}
+
+.amount__scale::after {
+    height: 2px;
+    background-color: #72828E;
+    z-index: 2;
+}
+
+.amount__scale-item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.amount__scale-item label {
+    display: inline-block;
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+    z-index: 3;
+}
+
+.amount__scale-item label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 10px;
+    height: 10px;
+
+    
+    border-radius: 50%;
+    background-color: var(--color-yellow);
+
+    transition: all 0.2s ease;
+}
+
+.amount__scale-item label:hover::before {
+    width: 15px;
+    height: 15px;
+}
+
+.amount__scale-item label::after {
+    content: attr(data-amount);
+    position: absolute;
+    bottom: -30px;
+
+    left: -24%;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+
+    transition: all 0.2s ease;
+}
+
+.amount__scale-item input {
+    position: absolute;
+    opacity: 0;
+}
+
+.amount__scale-item div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.amount__scale-item div::before,
+.amount__scale-item div::after {
+    opacity: 0;
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0px;
+    height: 0px;
+
+    border-radius: 50%;
+    border: 2px solid var(--color-orange);
+
+    transition: all 0.2s ease;
+}
+
+.amount__scale-item input:checked~div::before,
+.amount__scale-item input:checked~div::after {
+    opacity: 1;
+}
+
+.amount__scale-item input:checked~div::before {
+    width: 35px;
+    height: 35px;
+}
+
+.amount__scale-item input:checked~div::after {
+    width: 20px;
+    height: 20px;
+}
+
+.amount__scale-item input:checked+label::after {
+    color: var(--color-orange);
+}
+
+.amount__input {
+    position: relative;
+    width: 268px;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    
+}
+
+.amount__input svg {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    fill:#929699;
+    
+}
+
+.amount__input input{
+    width: 100%;
+    padding: 16px 143px 14px 9px;
+    
+    background-color: transparent;
+    border: 1px solid #929699;
+    
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    outline: none;
+}
+
+.amount__input input:focus {
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+}
+
+.amount__input input:focus::placeholder {
+    color: var(--color-green);
+} 
+
+.amount__input input:focus+svg {
+    fill: var(--color-green)
+}
+
+.amount__input input:invalid {
+    border: 1px solid var(--color-red);
+    color: var(--color-red)
+}
+
+.amount__input input:invalid::placeholder {
+    color: var(--color-red);
+} 
+
+.amount__input input:invalid+svg {
+    fill: var(--color-red)
+}
+
+
+::-webkit-inner-spin-button {
+    appearance: none;
+}
+::-webkit-outer-spin-button{
+    appearance: none;
+
+}
+
+.amount__radios {
+    display: flex;
+    justify-content: space-between;
+    min-width: 268px;
+    margin-bottom: 31px;
+}
+
+.amount__radios span {
+   flex: 0 0 50%;
+   display: block;
+}
+
+.amount__radios span{
+    text-align: center;
+ }
+
+.amount__radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.amount__radio+label {
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+}
+
+.amount__radio+label::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--color-orange);
+    top: 0;
+    left: 0;
+
+    transition: all 0.2s ease;
+}
+
+.amount__radio:checked+label::before {
+    background-color: var(--color-orange);
+  }
+
+.amount__btn {
+    padding-left: 74px;
+    padding-right: 74px;
+}
+
+.friend__share-text {
+    text-align: center;
+}
