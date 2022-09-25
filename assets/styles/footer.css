@@ -39,6 +39,8 @@
     line-height: var(--line-height-body);
 
     color: #BDBDBD;
+
+    transition: all 0.2s ease;
 }
 
 .subscribe__email::placeholder {
@@ -70,6 +72,8 @@
     
     background-color: var(--color-light-gray);
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .subscribe__submit:hover {
@@ -96,6 +100,7 @@
 
 .footer__social-network a{
     color:var(--color-white);
+    transition: all 0.2s ease;
     
 }
 
@@ -126,6 +131,8 @@
 
     border-radius: 50%;
     background-color: rgba(196, 196, 196, 0.5);
+
+    transition: all 0.2s ease;
 }
 
 .footer__icon::before {
