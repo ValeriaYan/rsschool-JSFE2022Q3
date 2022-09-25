@@ -70,6 +70,13 @@ body {
     color: var(--color-black-blue)
 }
 
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 20px;
@@ -164,6 +171,8 @@ a {
 .nav__link {
     color: var(--color-white);
     font-weight: 500;
+
+    transition: all 0.2s ease;
 }
 
 .nav__default,
