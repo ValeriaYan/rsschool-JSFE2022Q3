@@ -15,14 +15,14 @@
         <div class="header__container container">
             <div class="header__body">
                 <div class="header__main">
-                    <h1 class="header__logo logo"><a class="logo__link" href="#">PetStory online</a></h1>
+                    <h1 class="header__logo logo"><a class="logo__link" href="../../pages/main/index.html">PetStory online</a></h1>
                     <nav class="header__nav nav">
                         <ul class="nav__list">
-                            <div class="nav__item"><a class="nav__link nav__default">About</a></div>
-                            <div class="nav__item"><a class="nav__link" href="#">Map</a></div>
-                            <div class="nav__item"><a class="nav__link" href="#">Zoos</a></div>
-                            <div class="nav__item"><a class="nav__link" href="../donate/index.html">Donate</a></div>
-                            <div class="nav__item"><a class="nav__link" href="#">Contact us</a></div>
+                            <li class="nav__item"><a class="nav__link nav__default">About</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Map</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Zoos</a></li>
+                            <li class="nav__item"><a class="nav__link" href="../donate/index.html">Donate</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#">Contact us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -131,7 +131,9 @@
                 </div>
                 <div class="pets__arrow pets__arrow_right"></div>
             </div>
-            <button class="pets__btn btn">choose your favorite</button>
+            <div class="pets__btn-wrapper">
+                <button class="pets__btn btn">choose your favorite</button>
+            </div>
         </div>
     </section>
     <section class="friend">
@@ -158,7 +160,9 @@
                         <div class="step__text">Your favourite animal gets delicious dish</div>
                     </div>
                 </div>
-                <button class="friend__btn btn">Feed a friend now</button>
+                <div class="friend__btn-wrapper">
+                    <button class="friend__btn btn">Feed a friend now</button>
+                </div>
             </div>
         </div>
     </section>
@@ -225,7 +229,7 @@
                         The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
                     </p></div>
                 </div>
-                <div class="testimonials__review review">
+                <!-- <div class="testimonials__review review">
                     <div class="review__top">
                         <div class="review__avatar"></div>
                         <div class="review__info">
@@ -236,12 +240,56 @@
                     <div class="review__text"><p>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
                         The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.</p>
                         </div>
-                </div>
+                </div> -->
             </div>
             <input class="testimonials__range" type="range" value="0">
             <div class="testimonials__btn btn btn_flat">leave feedback</div>
         </div>
     </section>
-
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__logo logo"><a class="logo__link" href="../../pages/main/index.html">PetStory online</a></div>
+                <form class="footer__subscribe subscribe">
+                    <div class="subscribe__text">Subscribe to our news</div>
+                    <input type="email" class="subscribe__email" placeholder="Enter your email" required>
+                    <input type="submit"  class="subscribe__submit" value="Submit" onclick="return false">
+                </form>
+            </div>
+            <a class="footer__btn btn btn_flat" href="../../pages/donate/index.html">donate for volunteers</a>
+            <div class="footer__bottom">
+                <div class="footer__social-networks">
+                    <div class="footer__social-network footer__social-network_fb">
+                        <div class="footer__icon"></div>
+                        <a href="">Facebook</a>
+                    </div>
+                    <div class="footer__social-network footer__social-network_tw">
+                        <div class="footer__icon"></div>
+                        <a href="">Twitter</a>
+                    </div>
+                    <div class="footer__social-network footer__social-network_inst">
+                        <div class="footer__icon"></div>
+                        <a href="">Instagram</a>
+                    </div>
+                    <div class="footer__social-network footer__social-network_yt">
+                        <div class="footer__icon"></div>
+                        <a href="">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link nav__default">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Map</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Zoos</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                   <p>Designed by Alisa Samborskaya</p>
+                   <p>&copy;RSSchool & &copy;Yem Digital 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
