@@ -87,7 +87,9 @@ a {
     text-decoration: none;
 }
 
-.logo {
+.logo__link {
+    display: block;
+    
     position: relative;
 
     max-width: 82px;
@@ -100,9 +102,16 @@ a {
     
     font-size: var(--font-size-logo);
     font-weight: 400;
+    color: var(--color-white);
+
+    transition: all 0.2s ease;
 }
 
-.logo::before {
+.logo__link:hover {
+    color: var(--color-orange)
+}
+
+.logo__link::before {
     content: "";
     position: absolute;
     bottom: 5px;
@@ -110,10 +119,6 @@ a {
     width: 13px;
     height: 21px;
     background-image: url(../../assets/icons/bamboo-logo.svg);
-}
-
-.logo__link {
-    color: var(--color-white);
 }
 
 .btn {
