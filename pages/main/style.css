@@ -602,8 +602,13 @@
     height: 6px;
     background: var(--color-orange);
     border-radius: 5px;
-
+    
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.testimonials__range::-webkit-slider-thumb:hover {
+    background: var(--color-green);
 }
 
 .testimonials__range::-moz-range-thumb {

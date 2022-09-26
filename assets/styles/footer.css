@@ -10,7 +10,7 @@
     margin-bottom: 36px;
 }
 
-.footer__logo {
+.footer__logo .logo__link{
     border: 2px solid var(--color-black-blue);
 }
 
