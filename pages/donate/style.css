@@ -356,7 +356,7 @@
 }
 
 .amount__radio:checked+label::before {
-    background-color: var(--color-orange);
+    background-color: var(--color-green);
   }
 
 .amount__btn {
