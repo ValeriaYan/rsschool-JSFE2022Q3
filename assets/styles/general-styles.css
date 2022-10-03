@@ -44,6 +44,7 @@
 @media(max-width: 1000px){
     :root {
         --font-size-h1: calc((100vw - 640px)/(1000 - 640) * (85 - 54) + 54px);
+        --font-size-h3: calc((100vw - 640px)/(1000 - 640) * (36 - 24) + 24px);
     }
 }
 
@@ -51,8 +52,9 @@
     :root {
         --font-size-h1: calc((100vw - 320px)/(640 - 320) * (54 - 28) + 28px);
         --font-size-h2: calc((100vw - 320px)/(640 - 320) * (48 - 24) + 24px);
-        --font-size-h3: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
         --font-size-logo: 12px;
+        --font-size-subtitle: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
+        --font-size-h3: 24px;
     }
 }
 
@@ -67,20 +69,25 @@ body {
     font-size: var(--font-size-body);
     font-weight: 400;
     line-height: var(--line-height-body);
-    color: var(--color-black-blue)
+    color: var(--color-black-blue);
 }
 
 .wrapper {
-    height: 100vh;
+    /* height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .container {
-    max-width: 1200px;
-    padding: 0 20px;
+    max-width: 1220px;
+    padding: 0 30px;
     margin: 0 auto;
+}
+
+.main{
+    position: relative;
+    overflow-x: hidden;
 }
 
 a {
@@ -101,6 +108,7 @@ a {
     border-radius: 2px;
     
     font-size: var(--font-size-logo);
+    line-height: var(--line-height-small);
     font-weight: 400;
     color: var(--color-white);
 
@@ -192,4 +200,51 @@ a {
 
 .nav__item:last-child{
     margin-right: none;
+}
+
+.title {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-subtitle);
+}
+
+.h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+    .nav__item {
+        margin-right: 48px;
+    }
+
+    
+}
+@media (max-width: 800px) {
+    .nav__item {
+        margin-right: 30px;
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+}
+
+
+@media(max-width: 320px) {
+    .container {
+        max-width: 1182px;
+        padding: 0 11px;
+    }
+
+    .nav__list {
+        /* padding: 0 10px; */
+    }
 }
