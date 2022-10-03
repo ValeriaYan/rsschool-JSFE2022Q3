@@ -265,6 +265,21 @@
 
     .backstage__subtitle {
         margin: 30px 0 20px 0;
+        font-size: var(--font-size-h3);
+    }
+
+    .backstage__text {
+        padding-right: 15px;
+    }
+}
+
+@media(max-width: 590px) {
+    .backstage::before {
+        width: 80px;
+        height: 217px;
+        background-size: contain;
+        top: 255px;
+        right: -50px;
     }
 }
 
@@ -272,6 +287,7 @@
     .backstage {
         padding: 30px 0 40px 0;
     }
+
 }
 
 @media(max-width: 340px) {
@@ -288,12 +304,8 @@
         margin: 20px 0 10px 0;
     }
 
-    .backstage::before {
-        width: 80px;
-        height: 217px;
-        background-size: contain;
-        top: 255px;
-        right: -50px;
+    .backstage__text {
+        padding-right: 0;
     }
 }
 
@@ -654,6 +666,20 @@
     }
 }
 
+@media(max-width: 500px) {
+    .pets::before {
+        height: 70px;
+        width: 58px;
+    }
+
+    .pets::after {
+        width: 85px;
+        height: 71px;
+        right: -10px;
+        bottom: -4px;
+    }
+}
+
 @media(max-width: 380px) {
     .pets__cards {
         flex-direction: column;
@@ -666,13 +692,14 @@
         "left right"
         "row2 row2";
 
-        row-gap: 5px; 
+        row-gap: 10px; 
         column-gap: 20px;
     }
 
     .pets__cards_top > .card, 
     .pets__cards_bottom > .card{
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .pets__cards {
@@ -689,12 +716,6 @@
 }
 
 @media(max-width: 320px) {
-    .pets__cards_top > .card, 
-    .pets__cards_bottom > .card{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     .card__img {
         max-height: 285px;
     }
@@ -726,18 +747,6 @@
 
     .pets__body {
         margin-bottom: 0;
-    }
-
-    .pets::before {
-        height: 70px;
-        width: 58px;
-    }
-
-    .pets::after {
-        width: 85px;
-        height: 71px;
-        right: -10px;
-        bottom: -4px;
     }
 
     .pets__btn {
@@ -958,6 +967,7 @@
 
     .friend__h3 {
         margin-bottom: 20px;
+        font-size: var(--font-size-subtitle);
     }
 
     .friend__steps {
@@ -1270,6 +1280,10 @@
         text-align: center;
         padding: 62px 0 80px 0;
         overflow: hidden;
+    }
+
+    .testimonials__h3 {
+        font-size: var(--font-size-subtitle);
     }
 
     .testimonials__reviews {

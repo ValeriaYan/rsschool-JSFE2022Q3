@@ -44,6 +44,7 @@
 @media(max-width: 1000px){
     :root {
         --font-size-h1: calc((100vw - 640px)/(1000 - 640) * (85 - 54) + 54px);
+        --font-size-h3: calc((100vw - 640px)/(1000 - 640) * (36 - 24) + 24px);
     }
 }
 
@@ -51,8 +52,9 @@
     :root {
         --font-size-h1: calc((100vw - 320px)/(640 - 320) * (54 - 28) + 28px);
         --font-size-h2: calc((100vw - 320px)/(640 - 320) * (48 - 24) + 24px);
-        --font-size-h3: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
         --font-size-logo: 12px;
+        --font-size-subtitle: calc((100vw - 320px)/(640 - 320) * (36 - 24) + 24px);
+        --font-size-h3: 24px;
     }
 }
 

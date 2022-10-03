@@ -1,3 +1,4 @@
-var a = 1, b = function a(x) {x && a(--x);};
-
-console.log(a)
+const checkedBtn = document.querySelector(".amount__scale-item > input[value='100']");
+if(document.documentElement.clientWidth == 640){
+    checkedBtn.checked = true;
+}
