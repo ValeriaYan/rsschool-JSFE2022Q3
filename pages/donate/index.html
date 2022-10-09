@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../assets/styles/header.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../assets/styles/footer.css">
+    <link rel="stylesheet" href="../../assets/styles/burger.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,25 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="burger-menu">
+            <div class="burger-menu__content">
+                <div class="burger-menu__top">
+                    <div class="burger-menu__logo logo"><a class="logo__link" href="../../pages/main/index.html">PetStory online</a></div>
+                    <div class="burger-menu__close"></div>
+                </div>
+                <nav class="burger-menu__nav">
+                    <ul class="burger-menu__list">
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="../main/index.html">About</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Map</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Zoos</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="../donate/index.html">Donate</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu__copy"><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by &copy;</a></div>
+            </div>
+            <div class="overlay"></div>
+        </div>
         <header class="header">
             <div class="header__container container">
                 <div class="header__body">
@@ -185,5 +205,6 @@
     </div>
 
     <script src="./script.js"></script>
+    <script src="../../assets/scripts/burger.js"></script>
 </body>
 </html>
