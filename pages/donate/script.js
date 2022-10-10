@@ -7,7 +7,6 @@ amountScale.addEventListener('click', function(event) {
     for(let item of amountScaleItems) {
         if(item.contains(event.target)) {
             let input = item.querySelector('.amount__scale-item input');
-            console.log(input.value)
             amountInput.value = input.value;
         }
     }
@@ -20,5 +19,8 @@ amountInput.addEventListener('input', function() {
         }else{
             item.checked = false;
         }
+    }
+    if(amountInput.value.length > 4) {
+        amountInput.value = amountInput.value.slice(0, 4);
     }
 })
