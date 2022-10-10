@@ -43,6 +43,54 @@ const animalsData = [
         location: 'Native to United States',
         icon: 'meat'
     },
+    {
+        images: animals.animals8,
+        name: 'Raccoon',
+        location: 'Native to North America',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals9,
+        name: 'Panther',
+        location: 'Native to Africa',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals10,
+        name: 'Brown bear',
+        location: 'Scandinavia, Finland',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals11,
+        name: 'Leopard',
+        location: 'Native to Africa',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals12,
+        name: 'Rabbit',
+        location: 'Native to North America',
+        icon: 'banana'
+    },
+    {
+        images: animals.animals13,
+        name: 'Polar Bear',
+        location: 'Native to Arctic',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals14,
+        name: 'Wolf',
+        location: 'Kazakhstan, Canada',
+        icon: 'meat'
+    },
+    {
+        images: animals.animals15,
+        name: 'Koalas',
+        location: 'Native to Australia',
+        icon: 'banana'
+    },
 ]
 
 export default animalsData;
