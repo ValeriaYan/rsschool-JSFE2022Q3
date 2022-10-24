@@ -4,27 +4,21 @@ export default class Stats {
         this.time = '00:00:00'
     }
 
-    /**
-     * @param {number} num
-     */
-    set movements(num) {
+    setMovements(num) {
         if(num == 1) {
             this.movements++;
         }
     }
 
-    /**
-     * @param {string} time
-     */
-    set time(time) {
+    setTime(time) {
         this.time = time;
     }
 
-    get movements() {
+    getMovements() {
         return this.movements;
     }
 
-    get time() {
+    getTime() {
         return this.time;
     }
 }
