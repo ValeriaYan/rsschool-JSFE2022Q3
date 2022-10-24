@@ -7,6 +7,14 @@ export default class Game {
         this.stats = new Stats();
     }
 
+    checkFinish() {
+        return this.puzzle.checkFinish();
+    }
+
+    moveCell(cell) {
+        return this.puzzle.move(cell);
+    }
+
     getCells() {
         return this.puzzle.cells;
     }
@@ -19,6 +27,7 @@ export default class Game {
     }
 
     setStats(movements, time) {
+        movements = +movements;
         if(typeof movements === 'number') {
             this.stats.movements = movements;
         }
