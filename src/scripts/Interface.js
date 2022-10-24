@@ -3,16 +3,18 @@ import Elem from './Elem'
 export default class Interface {
     constructor() {
         this.elems = {}
-
+        this.interval;
         const game = new Elem('div', document.body, 'game').elem;
         const container = new Elem('div', game, 'container').elem;
         const buttons = new Elem('div', container, 'buttons').elem;
-        const buttonShuffle = new Elem('button', buttons, 'buttons__button buttons__button-shuffle').elem;
-        buttonShuffle.textContent = 'Shuffle';
         const buttonStart = new Elem('button', buttons, 'buttons__button buttons__button-start').elem;
         buttonStart.textContent = 'Start';
+        const buttonRestart = new Elem('button', buttons, 'buttons__button buttons__button-restart').elem;
+        buttonRestart.textContent = 'Restart';
         const buttonSave = new Elem('button', buttons, 'buttons__button buttons__button-save').elem;
         buttonSave.textContent = 'Save';
+        const buttonUpload = new Elem('button', buttons, 'buttons__button buttons__button-upload').elem;
+        buttonUpload.textContent = 'Upload save';
         const buttonResults = new Elem('button', buttons, 'buttons__button buttons__button-result').elem;
         buttonResults.textContent = 'Results';
         const stats = new Elem('div', container, 'stats').elem;
@@ -41,13 +43,43 @@ export default class Interface {
 
         const gameField = new Elem('div', container, 'game-field').elem;
 
+        const resize = new Elem('div', container, 'resize').elem;
+
+        const size3 = new Elem('button', resize, 'resize__size').elem;
+        size3.textContent = '3x3';
+        size3.dataset.size = 3;
+
+        const size4 = new Elem('button', resize, 'resize__size').elem;
+        size4.textContent = '4x4';
+        size4.dataset.size = 4;
+
+        const size5 = new Elem('button', resize, 'resize__size').elem;
+        size5.textContent = '5x5';
+        size5.dataset.size = 5;
+
+        const size6 = new Elem('button', resize, 'resize__size').elem;
+        size6.textContent = '6x6';
+        size6.dataset.size = 6;
+
+        const size7 = new Elem('button', resize, 'resize__size').elem;
+        size7.textContent = '7x7';
+        size7.dataset.size = 7;
+
+        const size8 = new Elem('button', resize, 'resize__size').elem;
+        size8.textContent = '8x8';
+        size8.dataset.size = 8;
+
+        const winMessage = new Elem('div', resize, 'win-message').elem;
+        winMessage.textContent = '';
+
 
         this.elems['container'] = container;
         this.elems['buttons'] = buttons;
-        this.elems['button-shuffle'] = buttonShuffle;
+        this.elems['button-restart'] = buttonRestart;
         this.elems['button-start'] = buttonStart;
         this.elems['button-save'] = buttonSave;
         this.elems['button-results'] = buttonResults;
+        this.elems['button-upload'] = buttonUpload;
         this.elems['stats'] = stats;
         this.elems['stats-movements'] = statsMovements;
         this.elems['movement-text'] = movementText;
@@ -57,20 +89,25 @@ export default class Interface {
         this.elems['timer-seconds'] = timerSeconds;
         this.elems['timer-minutes'] = timerMinutes;
         this.elems['timer-hours'] = timerHours;
+        this.elems['win-message'] = winMessage;
+        this.elems['resize'] = resize;
     }
 
     createGameField(cells) {
-        this.elems['game-field-rows'] = [];
+        while(this.elems['game-field'].firstChild) {
+            this.elems['game-field'].removeChild(this.elems['game-field'].firstChild);
+        }
         for(let i = 0; i < cells.length; i++) {
-            const gameFieldRow = new Elem('div', this.elems['game-field'], 'game-field__row row').elem;
-            gameFieldRow.style.position = 'relative'
-            gameFieldRow.style.left = 0;
-            gameFieldRow.style.top = 0;
-            this.elems['game-field-rows'].push(gameFieldRow);
-
             for(let j = 0; j < cells[i].length; j++) {
-                const rowItem = new Elem('div', this.elems['game-field-rows'][i], 'row__item').elem;
+                const rowItem = new Elem('div', this.elems['game-field'], 'game-field__item').elem;
                 rowItem.textContent = `${cells[i][j]}`;
+                if(cells[i][j] == '0') {
+                    rowItem.textContent = ``;
+                    rowItem.style.zIndex = -1;
+                }
+                rowItem.style.position = 'relative'
+                rowItem.style.left = 0;
+                rowItem.style.top = 0;
             }
         }
 
@@ -91,9 +128,16 @@ export default class Interface {
         }
     }
 
-    changeMovements() {
+    changeMovements(num) {
         const numberMoves = this.elems['movement-move'];
-        numberMoves.textContent = +numberMoves.textContent + 1;
+        if(num) {
+            numberMoves.textContent = num;
+        }else {
+            numberMoves.textContent = +numberMoves.textContent + 1;
+        }
+        if(num == 0) {
+            numberMoves.textContent = 0;
+        }
     }
 
     setTime(time) {
@@ -115,7 +159,7 @@ export default class Interface {
         }
 
         seconds++;
-        if(seconds < 9) {
+        if(seconds <= 9) {
             this.elems['timer-seconds'].textContent = '0' + seconds;
         }
 
@@ -131,7 +175,7 @@ export default class Interface {
             this.elems['timer-minutes'].textContent = '0' + minutes;
         }
 
-        if(minutes < 9) {
+        if(minutes <= 9) {
             this.elems['timer-minutes'].textContent = '0' + minutes;
         }
 
@@ -147,7 +191,7 @@ export default class Interface {
             this.elems['timer-hours'].textContent = '0' + hours;
         }
 
-        if(hours < 9) {
+        if(hours <= 9) {
             this.elems['timer-hours'].textContent = '0' + hours;
         }
 
@@ -162,10 +206,16 @@ export default class Interface {
         }
     }
 
+    stopTime() {
+        clearInterval(this.interval);
+    }
+
     startTime() {
-        this.countdown();
-        setInterval(this.countdown.bind(this), 1000)
+        this.stopTime();
+        this.interval = setInterval(this.countdown.bind(this), 1000)
     }
         
-
+    setWinMessage(movements, time) {
+        this.elems['win-message'].textContent = `Hooray! You solved the puzzle in ${time} and ${movements} moves!`;
+    }
 }
