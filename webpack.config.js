@@ -11,7 +11,7 @@ module.exports = {
     mode: 'development',
     entry: ['@babel/polyfill','./App.js'],
     output: {
-        filename: '[contenthash].bundle.js',
+        filename: '[name][contenthash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
@@ -25,11 +25,12 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html'
+            template: './index.html',
+            filename: '[name][contenthash].html'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[contenthash].css'
+            filename: '[name][contenthash].css'
         })
     ],
     resolve: {
