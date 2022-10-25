@@ -57,7 +57,7 @@ body {
 
     /* transition: all 0.2s ease; */
     cursor: pointer;
-    animation-duration: 0.2s;
+    animation-duration: 0.3s;
     animation-timing-function: ease;
 }
 

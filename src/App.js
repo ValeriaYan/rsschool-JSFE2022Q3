@@ -50,6 +50,10 @@ class App {
            for(let item of gameItems) {
             if(item.contains(event.target)) {
                 interfaceElem.moveCell(item, game.moveCell(item.textContent), audio);
+                gameField.style.pointerEvents = 'none';
+                setTimeout(function() {
+                    gameField.style.pointerEvents = 'auto';
+                },200)
 
                 if(game.checkFinish()){
                     let time = interfaceElem.elems['timer-hours'].textContent + ':' + interfaceElem.elems['timer-minutes'].textContent + ':' + interfaceElem.elems['timer-seconds'].textContent;

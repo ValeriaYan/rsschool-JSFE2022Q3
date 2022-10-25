@@ -170,13 +170,13 @@ export default class Interface {
         cell.style.animationName = orientation;
         let temp = cell.textContent;
         audio.play();
-
+        
         setTimeout(function() {
             cell.style.zIndex = -1;
             cellWithNull.style.zIndex = 2;
             cell.textContent = cellWithNull.textContent;
             cellWithNull.textContent = temp;
-        }, 180);
+        }, 200);
 
         cellWithNull.style.animationName = 'none';
         this.changeMovements();
