@@ -46,10 +46,13 @@ class App {
                 interfaceElem.changeMovements();
                 if(game.checkFinish()){
                     let time = interfaceElem.elems['timer-hours'].textContent + ':' + interfaceElem.elems['timer-minutes'].textContent + ':' + interfaceElem.elems['timer-seconds'].textContent;
+                    let move = interfaceElem.elems['movement-move'].textContent;
                     gameField.style.pointerEvents = 'none';
-                    interfaceElem.setWinMessage(interfaceElem.elems['movement-move'].textContent,time)
+                    interfaceElem.setWinMessage(move, time)
                     interfaceElem.elems['win-message'].style.display = 'block';
                     interfaceElem.stopTime();
+
+                    storage.saveResult({'time': time, 'movements': move}, currentSize);
                 }
             }
            }
@@ -68,7 +71,8 @@ class App {
             gameItems = gameField.querySelectorAll('.game-field__item');
 
             interfaceElem.setTime('00:00:00');
-            interfaceElem.startTime();
+            interfaceElem.stopTime();
+            gameField.style.pointerEvents = 'none';
             interfaceElem.changeMovements(0);
         })
 
@@ -102,9 +106,17 @@ class App {
                 gameField.style.gridTemplateRows = `repeat(${currentSize}, 1fr)`;
             }
         })
+
+        let resultsBtn = interfaceElem.elems['button-results'];
+        resultsBtn.addEventListener('click', function() {
+            interfaceElem.fillTableResults(storage.getTableResults());
+            interfaceElem.elems['table'].classList.add('_active');
+
+            console.log(interfaceElem.elems['table'].classList.contains('_active'))
+        })
+
     }
 }
 
 const app = new App();
 app.render();
-alert('Привет! Проверь, пожалуйста работу 25.10 вечером\nЧуть-чуть осталось доделать, спать уже хочу :( Можешь пока поставить 0, но оставить контакты, чтобы я могла связаться и попросить перепроверить\nСпасибо!')
