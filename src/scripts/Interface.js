@@ -10,7 +10,7 @@ export default class Interface {
         const buttonStart = new Elem('button', buttons, 'buttons__button buttons__button-start').elem;
         buttonStart.textContent = 'Start';
         const buttonRestart = new Elem('button', buttons, 'buttons__button buttons__button-restart').elem;
-        buttonRestart.textContent = 'Restart';
+        buttonRestart.textContent = 'New Game';
         const buttonSave = new Elem('button', buttons, 'buttons__button buttons__button-save').elem;
         buttonSave.textContent = 'Save';
         const buttonUpload = new Elem('button', buttons, 'buttons__button buttons__button-upload').elem;
@@ -91,6 +91,8 @@ export default class Interface {
         this.elems['timer-hours'] = timerHours;
         this.elems['win-message'] = winMessage;
         this.elems['resize'] = resize;
+
+        this.createTableResults();
     }
 
     createGameField(cells) {
@@ -112,6 +114,39 @@ export default class Interface {
         }
 
     } 
+
+    createTableResults() {
+        const tableResults = new Elem('table', this.elems['container'], 'table').elem;
+        this.elems['table'] = tableResults;
+        const tableMainRow = new Elem('tr', tableResults, 'table__main-row main-row').elem;
+        const tableTh = new Elem('th', tableMainRow, 'main-row__item').elem;
+        const tableTh2 = new Elem('th', tableMainRow, 'main-row__item').elem;
+        tableTh2.textContent = 'Size';
+        const tableTh3 = new Elem('th', tableMainRow, 'main-row__item').elem;
+        tableTh3.textContent = 'Move';
+        const tableTh4 = new Elem('th', tableMainRow, 'main-row__item').elem;
+        tableTh4.textContent = 'Time';
+
+        for(let i = 0; i < 10; i++) {
+            const tableRow = new Elem('tr', tableResults, 'table__row row').elem;
+            const tableTd = new Elem('td', tableRow, 'row__item').elem;
+            tableTd.textContent = i + 1;
+            const tableTd2 = new Elem('td', tableRow, 'row__item row__item_size').elem;
+            const tableTd3 = new Elem('td', tableRow, 'row__item row__item_move').elem;
+            const tableTd4 = new Elem('td', tableRow, 'row__item row__item_time').elem;
+        }
+    }
+
+    fillTableResults(tableResults) {
+        let sizeItems = this.elems['table'].querySelectorAll('.row__item_size');
+        let moveItems = this.elems['table'].querySelectorAll('.row__item_move');
+        let timeItems = this.elems['table'].querySelectorAll('.row__item_time');
+        for(let i = 0; i < tableResults.length; i++) {
+            sizeItems[i].textContent = tableResults[i]['size'] + 'x' +  tableResults[i]['size'];
+            moveItems[i].textContent = tableResults[i]['stats']['movements'];
+            timeItems[i].textContent = tableResults[i]['stats']['time'];
+        }
+    }
 
     moveCell(cell, orientation) {
         if(orientation == 'top'){
