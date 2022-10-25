@@ -12,7 +12,7 @@ class App {
         let game = new Game(currentSize);
         let interval;
         let storage = new Storage();
-        let audio = new Audio('../src/audio/sound.mp3');
+        let audio = new Audio('./src/audio/sound.mp3');
         interfaceElem.createGameField(game.getCells());
 
         let gameField = interfaceElem.elems['game-field'];
