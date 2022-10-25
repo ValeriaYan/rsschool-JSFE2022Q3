@@ -3,7 +3,6 @@ export default class Puzzle {
         this.size = size;
         this.cells = cells;
 
-        console.log(this.cells)
         if(cells.length == 0) {
             for(let i = 0; i < size; i++) {
                 this.cells.push([]);
@@ -86,7 +85,7 @@ export default class Puzzle {
 
     checkFinish() {
         let arrCells = [];
-        console.log(arrCells)
+        
         for(let i = 0; i < this.size; i++) {
             arrCells.push(...this.cells[i]);
         }
