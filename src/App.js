@@ -25,7 +25,6 @@ class App {
         })
 
         resize.addEventListener('click', function(event) {
-            console.log(true)
             for(let item of resizeItems) {
                 if(item.contains(event.target)) {
                     currentSize = item.dataset.size;

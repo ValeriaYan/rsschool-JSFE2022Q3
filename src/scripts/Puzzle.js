@@ -113,8 +113,7 @@ export default class Puzzle {
         }
 
         let indexRowWithNull = Math.floor(array.findIndex((item) => item == 0) / this.size) + 1;
-        
-        if((inversions + indexRowWithNull) % 2 == 0) {
+        if((inversions + indexRowWithNull + Math.sqrt(array.length)) % 2 == 0) {
             return true;
         } 
         return false;
