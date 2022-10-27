@@ -106,12 +106,11 @@ export default class Puzzle {
         let inversions = 0;
         for(let i = 0; i < array.length; i++) {
             for(let j = 0; j < i; j++) {
-                if(array[i] < array[j]){
+                if(array[j] > array[i] && array[j] !== 0 && array[i] !== 0){
                     inversions++;
                 }
             }
         }
-
         let indexRowWithNull = Math.floor(array.findIndex((item) => item == 0) / this.size) + 1;
         if((inversions + indexRowWithNull + Math.sqrt(array.length)) % 2 == 0) {
             return true;
