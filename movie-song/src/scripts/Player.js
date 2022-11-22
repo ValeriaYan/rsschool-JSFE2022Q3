@@ -126,7 +126,6 @@ export default class Player {
     }
     
     setVolume(){
-        console.log(this.volumeRange.value)
         this.audio.volume = (this.volumeRange.value / 100);
         this.progressRange();
         this.changeIconVolume();

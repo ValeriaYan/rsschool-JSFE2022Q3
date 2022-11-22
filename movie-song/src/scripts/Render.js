@@ -1,10 +1,5 @@
-import Question from "./Question.js";
-import Score from "./Score.js";
-import categories from '../../data/index.js'
-import Film from "./Film.js";
+
 import Player from "./Player.js";
-import Quiz from "./Quiz.js";
-import animatedSerials from "../img/animated-serials/index.js";
 
 export default class Render {
     constructor(quiz) {
