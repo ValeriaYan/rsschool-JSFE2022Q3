@@ -1,9 +1,9 @@
 export default class Film {
-    constructor(name, audio, img, description) {
-        this.name = name;
-        this.audio = audio;
-        this.img = img; 
-        this.description = description;
+    constructor(filmObj) {
+        this.name = filmObj.name;
+        this.audio = filmObj.audio;
+        this.img = filmObj.img; 
+        this.description = filmObj.description;
     }
 
     getName() {
