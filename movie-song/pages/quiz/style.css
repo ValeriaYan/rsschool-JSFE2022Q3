@@ -155,6 +155,12 @@
 .answers__answer {
     padding: 10px;
     cursor: pointer;
+
+    transition: all ease 0.2s;
+}
+
+.answers__answer:hover {
+    color: rgb(204, 204, 204);
 }
 
 .answers__answer.true {
