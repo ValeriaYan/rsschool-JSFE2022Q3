@@ -30,7 +30,7 @@ export default class Quiz {
     getFilmByName(name) {
         const category = categories[this.categoriesName[this.currentCategory]];
         let film = category.find((film) => film.name == name);
-        return new Film(film.name, film.audio, film.img, film.description);
+        return new Film(film);
     }
 
     getAnswers() {

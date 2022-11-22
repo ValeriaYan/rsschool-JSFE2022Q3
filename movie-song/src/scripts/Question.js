@@ -22,7 +22,7 @@ export default class Question {
     getRandomFilm() {
         const randomNum = this.getRandomNum(this.category.length);
         const randomFilm = this.category[randomNum];
-        return new Film(randomFilm.name, randomFilm.audio, randomFilm.img, randomFilm.description);
+        return new Film(randomFilm);
     }
 
     setAnswers() {

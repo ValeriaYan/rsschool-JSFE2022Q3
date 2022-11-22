@@ -18,7 +18,7 @@ export default class Player {
 
         this.audio.addEventListener('loadeddata', this.setAudioDuration.bind(this));
         this.volumeRange.addEventListener('input', this.setVolume.bind(this));
-        this.volumeIcon.addEventListener('click', this.offVolume(this));
+        this.volumeIcon.addEventListener('click', this.offVolume.bind(this));
     }
 
     changeSong(newSrc) {
@@ -126,6 +126,7 @@ export default class Player {
     }
     
     setVolume(){
+        console.log(this.volumeRange.value)
         this.audio.volume = (this.volumeRange.value / 100);
         this.progressRange();
         this.changeIconVolume();

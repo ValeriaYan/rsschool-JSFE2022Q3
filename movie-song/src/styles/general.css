@@ -7,6 +7,7 @@
 :root {
     --main-color: rgba(148,109,70, 0.9);
     --color-text: rgba(180, 150, 13, 0.9);
+    --color-grey: rgb(90, 89, 86);
 }
 
 body {
@@ -19,7 +20,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    background-image: url(../../src/img/bg4.png);
+    background-image: url(../../src/img/bg4.webp);
     background-size: cover;
     background-position: center;
     
@@ -93,7 +94,7 @@ button {
 }
 
 .main__btn:disabled {
-    background-color: rgb(90, 89, 86);
+    background-color: var(--color-grey);
 }
 
 .main__message {
