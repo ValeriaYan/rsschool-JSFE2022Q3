@@ -8,7 +8,7 @@ const movies = {
     godfatherWaltz: '../../src/img/movies/7.webp',
     alice: '../../src/img/movies/8.webp',
     backToTheFuture: '../../src/img/movies/9.webp',
-    interception: '../../src/img/movies/10.webp',
+    inception: '../../src/img/movies/10.webp',
     hachi: '../../src/img/movies/11.webp'
 }
 

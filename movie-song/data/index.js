@@ -1,13 +1,13 @@
-import animatedSerials from './animated-serials/index.js'
+import animatedSeries from './animated-series/index.js'
 import anime from './anime/index.js'
 import cartoons from './cartoons/index.js'
 import movies from './movies/index.js'
-import serials from './serials/index.js'
+import series from './series/index.js'
 
 export default {
     movies,
-    serials,
+    series,
     anime,
     cartoons,
-    animatedSerials,
+    animatedSeries,
 }

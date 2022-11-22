@@ -12,7 +12,7 @@ const data = [
         name: 'Demon Slayer',
         audio: animeAudio.demonSlayer,
         img: animeImg.demonSlayer,
-        description: 'Demon Slayer:  is a Japanese manga series written and illustrated by Koyoharu Gotouge.It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon. '
+        description: 'Demon Slayer: is a Japanese manga series written and illustrated by Koyoharu Gotouge.It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon. '
     },
     {
         name: 'Tokyo Ghoul',
@@ -48,7 +48,7 @@ const data = [
         name: 'Death Note',
         audio: animeAudio.deathNote,
         img: animeImg.deathNote,
-        description: 'Death Note (stylized in all caps) is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata.]The story follows Light Yagami, a teen genius who discovers a mysterious notebook: the "Death Note", which belonged to the shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages. The series centers around Light\'s subsequent attempts to use the Death Note to carry out a worldwide massacre of individuals whom he deems immoral and to create a crime-free society, using the alias of a god-like vigilante named "Kira", and the subsequent efforts of an elite Japanese police task force, led by enigmatic detective L, to apprehend him.'
+        description: 'The story follows Light Yagami, a teen genius who discovers a mysterious notebook: the "Death Note", which belonged to the shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages. The series centers around Light\'s subsequent attempts to use the Death Note to carry out a worldwide massacre of individuals whom he deems immoral and to create a crime-free society, using the alias of a god-like vigilante named "Kira", and the subsequent efforts of an elite Japanese police task force, led by enigmatic detective L, to apprehend him.'
     },
     {
         name: 'Naruto',
