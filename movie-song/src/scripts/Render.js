@@ -19,6 +19,7 @@ export default class Render {
         this.quiz = quiz;
         this.currentFilm = quiz.getFilm();
         this.infoBody = document.querySelector('.info__body');
+        this.infoDescription = document.querySelector('.info__text')
         this.infoMessage = document.querySelector('.info__message');
         this.nextLevelBtn = document.querySelector('.main__btn_next-level'); 
         this.btnResult = document.querySelector('.main__btn_result');
@@ -107,6 +108,8 @@ export default class Render {
         }
         this.infoImg.append(filmImg);
         this.infoName.textContent = film.getName();
+
+        this.infoDescription.textContent = film.getDescription();
 
         if(!this.infoPlayer) {
             this.infoPlayer = new Player(film.getAudio(), this.infoPlayerElem);

@@ -152,9 +152,36 @@
     z-index: 2;
 }
 
+.info__text {
+    overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      line-clamp: 4;
+      box-orient: vertical;
+}
+
 .answers__answer {
+    position: relative;
     padding: 10px;
     cursor: pointer;
+
+    transition: all ease 0.2s;
+}
+
+.answers__answer:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: white;
 
     transition: all ease 0.2s;
 }
@@ -163,12 +190,12 @@
     color: rgb(204, 204, 204);
 }
 
-.answers__answer.true {
-    color:rgb(9, 255, 0);
+.answers__answer.true::before{
+    background-color: rgb(9, 255, 0);
 }
 
-.answers__answer.false {
-    color:rgb(122, 0, 0);
+.answers__answer.false::before{
+    background-color: rgb(122, 0, 0);
 }
 
 .main__btn {
