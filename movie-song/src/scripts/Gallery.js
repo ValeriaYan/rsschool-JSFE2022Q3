@@ -29,7 +29,6 @@ export default class Gallery {
         volume.max = '100';
         volume.value = '50';
 
-        console.log(player)
         return player;
     }
 

@@ -8,7 +8,7 @@ const movies = {
     godfatherWaltz: '../../src/audio/movies/godfather-waltz.mp3',
     alice: '../../src/audio/movies/alice.mp3',
     backToTheFuture: '../../src/audio/movies/back-to-the-future.mp3',
-    interception: '../../src/audio/movies/interception.mp3',
+    inception: '../../src/audio/movies/inception.mp3',
     hachi: '../../src/audio/movies/hachi.mp3'
 }
 

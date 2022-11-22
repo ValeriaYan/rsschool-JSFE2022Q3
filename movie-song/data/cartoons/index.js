@@ -27,40 +27,40 @@ const data = [
         description: 'When Coraline moves to an old house, she feels bored and neglected by her parents. She finds a hidden door with a bricked up passage. During the night, she crosses the passage and finds a parallel world where everybody has buttons instead of eyes, with caring parents and all her dreams coming true. When the Other Mother invites Coraline to stay in her world forever, the girl refuses and finds that the alternate reality where she is trapped is only a trick to lure her.'
     },
     {
-        name: 'Rapunzel',
+        name: 'Tangled',
         audio: cartoonsAudio.rapunzel,
         img: cartoonsImg.rapunzel,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'Tangled tells the story of Rapunzel, a lost young princess with magical long blonde hair who yearns to leave her secluded tower. She accepts the aid of an intruder to take her out into the world which she has never seen.'
     },
     {
         name: 'Monsters Inc',
         audio: cartoonsAudio.monstersInc,
         img: cartoonsImg.monstersInc,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'The film centers on two monsters, the hairy James P. "Sulley" Sullivan and his one-eyed partner and best friend Mike Wazowski, who are employed at the titular energy-producing factory Monsters, Inc., which generates power by scaring human children. However, the monster world believes that the children are toxic, and when a little human girl sneaks into the factory, she must be returned home before it is too late.'
     },
     {
         name: 'Lady and the Tramp',
         audio: cartoonsAudio.ladyAndTramp,
         img: cartoonsImg.ladyAndTramp,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'Lady and the Tramp is a 1955 American animated musical romance film witch tells the story of Lady the pampered Cocker Spaniel as she grows from puppy to adult, deals with changes in her family, and meets and falls in love with Tramp the homeless mutt.'
     },
     {
         name: 'Shrek',
         audio: cartoonsAudio.shrek,
         img: cartoonsImg.shrek,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'It\'s the story of a terrifying green ogre by the name of Shrek, who lives in a swamp. But all of the sudden, the evil Lord Farquaad banishes a bunch of fairy tale creatures to Shrek\'s swamp. So Shrek now must go on a quest to save Princess Fiona, along with a fast-talking donkey whose name is literally Donkey in order to get his swamp back.'
     },
     {
         name: 'The Nightmare Before Christmas',
         audio: cartoonsAudio.nightmareBeforeChristmas,
         img: cartoonsImg.nightmareBeforeChristmas,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'Jack Skellington, the pumpkin king of Halloween Town, is bored with doing the same thing every year for Halloween. One day he stumbles into Christmas Town, and is so taken with the idea of Christmas that he tries to get the resident bats, ghouls, and goblins of Halloween Town to help him put on Christmas instead of Halloween -- but alas, they can\'t get it quite right.'
     },
     {
         name: 'Frozen',
         audio: cartoonsAudio.frozen,
         img: cartoonsImg.frozen,
-        description: 'Adventure Time is an American fantasy animated television series created by Pendleton Ward for Cartoon Network and distributed by Warner Bros. Domestic Television. The series follows the adventures of a boy named Finn and his best friend and adoptive brother Jake — a dog with the magical power to change size and shape at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum, the Ice King, Marceline, BMO, and others.'
+        description: 'Frozen tells the story of Princess Anna as she teams up with an iceman, his reindeer, and a snowman to find her estranged sister Elsa, whose icy powers have inadvertently trapped their kingdom in eternal winter.'
     },
 ]
 
