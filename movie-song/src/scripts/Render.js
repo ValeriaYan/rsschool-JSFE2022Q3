@@ -189,7 +189,7 @@ export default class Render {
     showResults() {
         this.resultsBlock.classList.add('_active');
         this.quizBlock.classList.remove('_active');
-        if(this.quiz.getScore() == 25) {
+        if(this.quiz.getScore() == 30) {
             this.showFullScoreMessage();
         }else {
             this.showNotFullScoreMessage();
