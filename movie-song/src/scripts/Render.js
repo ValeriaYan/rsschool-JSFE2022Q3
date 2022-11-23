@@ -56,6 +56,9 @@ export default class Render {
         this.correctAnswerGiven = false;
         this.nextLevelBtn.disabled = true;
         this.questionPlayer.pauseAudio();
+        if(this.infoPlayer) {
+            this.infoPlayer.pauseAudio();
+        }
         this.unmarkAnswers();
     }
 
