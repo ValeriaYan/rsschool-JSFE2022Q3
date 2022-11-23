@@ -247,6 +247,13 @@
     }
 }
 
+@media(max-width: 670px) {
+    .main__categories {
+        flex-wrap: wrap;
+    }
+}
+
+
 @media(max-width: 570px) {
     .main__category {
         font-size: 14px;
