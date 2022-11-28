@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../src/icons/logo.svg">
+    <title>MovieSong</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="content">
+                <header class="header">
+                    <div class="header__logo">
+                        <img src="../../src/icons/logo.svg" alt="" width="32">
+                    </div>
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link nav__link_quiz">Quiz</a></li>
+                            <li class="nav__item"><a href="../gallery/index.html" class="nav__link nav__link_gallery">Gallery</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="start _active">
+                    <main class="main">
+                        <div class="main__message">Hi! This is a quiz that will test your knowledge of music from movies, TV series and cartoons. Have a nice time!</div>
+                        <button class="main__btn main__btn_start">Start</button>
+                    </main>
+                </div>
+                <div class="quiz">
+                    <main class="main">
+                        <div class="main__header">
+                            <div class="main__categories">
+                                <div class="main__category _active">Movies</div>
+                                <div class="main__category">Soviet Movies</div>
+                                <div class="main__category">Series</div>
+                                <div class="main__category">Anime</div>
+                                <div class="main__category">Cartoons</div>
+                                <div class="main__category">Animated Series</div>
+                            </div>
+                            <div class="main__score">Score: <span class="main__score-num">0</span></div>
+                        </div>
+                        <div class="main__question question">
+                            <div class="question__img">
+                                
+                            </div>
+                            <div class="question__player player">
+                                <div class="player__header">
+                                    <div class="player__song-name">******</div>
+                                    <div class="player__time">
+                                        <div class="player__time-current">0:00</div>
+                                          <div class="player__time-divider">/</div>
+                                          <div class="player__time-duration">0:00</div>
+                                    </div>
+                                </div>
+                                <div class="player__controls">
+                                    <div class="player__buttons">
+                                        <button class="play player__icon"></button>
+                                    </div>
+                                    <div class="player__timeline">
+                                        <div class="player__progress" style="width: 0;"></div>
+                                    </div>
+                                    <div class="player__volume">
+                                        <div class="player__volume-icon"></div>
+                                        <input class="player__volume-range" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__body">
+                            <div class="main__answers answers">
+                                <div class="answers__answer">Answer 1</div>
+                                <div class="answers__answer">Answer 2</div>
+                                <div class="answers__answer">Answer 3</div>
+                                <div class="answers__answer">Answer 4</div>
+                                <div class="answers__answer">Answer 5</div>
+                                <div class="answers__answer">Answer 6</div>
+                            </div>
+                            <div class="main__info info">
+                                <div class="info__message _active">Listen to the player. Select a film from the list</div>
+                                <div class="info__body">
+                                    <div class="info__header">
+                                        <div class="info__img"></div>
+                                        <div class="info__player player">
+                                            <div class="player__header">
+                                                <div class="player__song-name">Hello</div>
+                                                <div class="player__time">
+                                                    <div class="player__time-current">0:00</div>
+                                                      <div class="player__time-divider">/</div>
+                                                      <div class="player__time-duration">0:00</div>
+                                                </div>
+                                            </div>
+                                            <div class="player__controls">
+                                                <div class="player__buttons">
+                                                    <button class="play player__icon"></button>
+                                                </div>
+                                                <div class="player__timeline">
+                                                    <div class="player__progress" style="width: 0;"></div>
+                                                </div>
+                                                <div class="player__volume">
+                                                    <div class="player__volume-icon"></div>
+                                                    <input class="player__volume-range" type="range" min="0" max="100" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat et veniam molestias sit temporibus laborum dignissimos esse, repellendus nisi vitae commodi, eveniet quos quasi quidem ducimus quod voluptatibus culpa necessitatibus.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="main__btn main__btn_next-level" disabled>Next level</button>
+                        <button class="main__btn main__btn_result" style="display: none">Show Result</button>
+                    </main>
+                </div>
+                <div class="results">
+                    <main class="main">
+                        <div class="main__message main__message_full-score">
+                            Congratulations! You have scored the full number of points. Your score: <span class="main__score-num"></span>
+                        </div>
+                        <div class="main__message main__message_not-full-score">
+                            Congratulations! Quiz passed. Your score: <span class="main__score-num"></span>
+                        </div>
+                        <a class="main__btn main__btn_try-again" href="../quiz/index.html">Try again</a>
+                    </main>
+                </div>
+                <footer class="footer">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="https://github.com/ValeriaYan">
+                            <img src="../../src/icons/gh-logo.svg" alt="" width="40">
+                        </a></li>
+                        <li class="footer__item">2022 by Valeria Yanycheva</li>
+                        <li class="footer__item">
+                            <a href="https://rs.school">
+                                <img src="../../src/icons/rs-logo.svg" alt="" width="80">
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./App.js"></script>
+</body>
+</html>
