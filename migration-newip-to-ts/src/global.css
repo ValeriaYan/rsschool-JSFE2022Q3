@@ -1,20 +1,40 @@
+@import url(./burger.css);
+
 body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 header {
     padding: 10px 30px;
+    flex: 0 0 auto;
+    height: 15%;
+    display: flex;
+    align-items: center;
 }
 
 header h1 {
     font-size: 40px;
     font-weight: 800;
+    margin-left: 20px;
+}
+
+
+main {
+    flex: 1 0 auto;
+    max-height: 75%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
 }
 
 footer {
-    height: 100px;
+    flex: 0 0 auto;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,4 +52,30 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+
+::-webkit-scrollbar {
+    width: 3px; 
+    height: 8px;
+    background-color: #17181c;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(175, 175, 175);
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+@media(max-width: 990px) {
+    body {
+        position: fixed;
+        width: 100vw;
+    }
+    main {
+        display: block;
+    }
+
+    header h1 {
+        margin-left: 20px;
+    }
 }

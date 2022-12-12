@@ -8,14 +8,21 @@
     </head>
     <body>
         <header>
+            <div class="header__burger-icon">
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+            </div>
             <h1>News Portal</h1>
         </header>
         <main>
-            <div class="sources buttons"></div>
+            <div class="sources buttons">
+            </div>
             <div class="news"></div>
+            <div class="overlay"></div>
         </main>
         <footer>
-            <p class="copyright">
+            <p class="footer__item copyright">
                 Copyright <a href="https://newsapi.org">NewsAPI</a>
             </p>
         </footer>
@@ -45,6 +52,19 @@
                 </div>
             </div>
         </template>
+
+        <script>
+            const burgerIcon = document.querySelector('.header__burger-icon');
+            const sources = document.querySelector('.sources');
+            const overlay = document.querySelector('.overlay')
+            function toggleBurger() {
+                sources.classList.toggle('_active');
+                overlay.classList.toggle('_active')
+            }
+
+            burgerIcon.addEventListener('click', toggleBurger);
+            overlay.addEventListener('click', toggleBurger)
+        </script>
 
         <script src="./index.js"></script>
     </body>
